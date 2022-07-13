@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+One_news
+{% endblock title %}
+
+{% block content %}
+{{ one_news.author }}
+<h2>{{ one_news.name | censor }}</h2>
+<h4>{{ one_news.post_time_create|date:'d.M.Y'  }}</h4>
+{{ one_news.description | censor }}
+
+{% endblock content %}
