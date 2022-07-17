@@ -10,10 +10,7 @@ for word in cencored_list:
 
 @register.filter()
 def censor(text):
-    texts = [text]
+    for i in range(len(cencored_list)):
+        text = text.lower().replace(cencored_list[i], cencored_stars[i])
 
-    for word in texts:
-        for i in range(len(cencored_list)):
-            word = word.lower().replace(cencored_list[i], cencored_stars[i])
-
-    return word
+    return text
