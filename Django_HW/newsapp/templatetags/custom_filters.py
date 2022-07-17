@@ -14,6 +14,6 @@ def censor(text):
 
     for word in texts:
         for i in range(len(cencored_list)):
-            word = word.replace(cencored_list[i], cencored_stars[i])
+            word = word.lower().replace(cencored_list[i], cencored_stars[i])
 
     return word
